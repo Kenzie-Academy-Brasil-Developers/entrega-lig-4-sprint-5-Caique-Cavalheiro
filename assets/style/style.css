@@ -10,7 +10,6 @@ body{}
     text-align: center;
 }
 .header__title{}
-
 header h1 {
     font-size: 30px;
 }
@@ -25,18 +24,30 @@ header h1 {
     justify-content: center;
     align-items: center;
 }
-
 section{
     display: flex;
     flex-direction: column;
 }
-
 .linha{
     width: 40px;
     height: 50px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.jogador1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+}
+.jogador2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+}
 /* Media Queries */
 @media screen and (min-width: 768px){}
 @media screen and (min-width: 1024px){}
