@@ -19,7 +19,6 @@ for(let i = 0; i < 7; i++){
 }
 
 function colunaSelecionada(event){
-    let jogador = switchJogador();
     const coluna = event.currentTarget;
     let looping = false;
     let number = 0;
@@ -27,6 +26,7 @@ function colunaSelecionada(event){
         number++;
         if(number <= coluna.childElementCount){
             if(coluna.children[coluna.childElementCount-number].hasChildNodes() ===false){
+                let jogador = switchJogador();
                 const pecas = document.createElement('div');
                 pecas.classList.add(jogador);
                 coluna.children[coluna.childElementCount-number].appendChild(pecas);
