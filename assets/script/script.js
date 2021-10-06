@@ -216,13 +216,17 @@ function winVertical(element){
         if(linha5.firstChild.classList.contains('jogador1') && linha4.firstChild.classList.contains('jogador1') 
         && linha3.firstChild.classList.contains('jogador1') && linha2.firstChild.classList.contains('jogador1')){
             winDiv.classList.remove('none');
-            winDiv.classList.add('footer__winner');
-            jogadorWin.innerText = 'Jogador 1';
+            winDiv.classList.add('footer__winner__jogador1');
+            main.classList.add('main__opacity');
+            jogadorWin.innerText = 'Mario';
+            jogadorWin.style.color = "#fe0022"
         }else if(linha5.firstChild.classList.contains('jogador2') && linha4.firstChild.classList.contains('jogador2') 
         && linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2')){
             winDiv.classList.remove('none');
-            winDiv.classList.add('footer__winner');
-            jogadorWin.innerText = 'Jogador 2';
+            winDiv.classList.add('footer__winner__jogador2');
+            main.classList.add('main__opacity');
+            jogadorWin.innerText = 'Luigi';
+            jogadorWin.style.color = "#2b9b1d";
         }
     }
 
@@ -230,13 +234,17 @@ function winVertical(element){
         if(linha4.firstChild.classList.contains('jogador1') && linha3.firstChild.classList.contains('jogador1') 
         && linha2.firstChild.classList.contains('jogador1') && linha1.firstChild.classList.contains('jogador1')){
             winDiv.classList.remove('none');
-            winDiv.classList.add('footer__winner');
-            jogadorWin.innerText = 'Jogador 1';
+            winDiv.classList.add('footer__winner__jogador1');
+            main.classList.add('main__opacity');
+            jogadorWin.innerText = 'Mario';
+            jogadorWin.style.color = "#fe0022"
         }else if(linha4.firstChild.classList.contains('jogador2') && linha3.firstChild.classList.contains('jogador2') 
         && linha2.firstChild.classList.contains('jogador2') && linha1.firstChild.classList.contains('jogador2')){
             winDiv.classList.remove('none');
-            winDiv.classList.add('footer__winner');
-            jogadorWin.innerText = 'Jogador 2';
+            winDiv.classList.add('footer__winner__jogador2');
+            main.classList.add('main__opacity');
+            jogadorWin.innerText = 'Luigi';
+            jogadorWin.style.color = "#2b9b1d";
         }
     }
 
@@ -244,13 +252,17 @@ function winVertical(element){
         if(linha3.firstChild.classList.contains('jogador1') && linha2.firstChild.classList.contains('jogador1') 
         && linha1.firstChild.classList.contains('jogador1') && linha0.firstChild.classList.contains('jogador1')){
             winDiv.classList.remove('none');
-            winDiv.classList.add('footer__winner');
-            jogadorWin.innerText = 'Jogador 1';
+            winDiv.classList.add('footer__winner__jogador1');
+            main.classList.add('main__opacity');
+            jogadorWin.innerText = 'Mario';
+            jogadorWin.style.color = "#fe0022"
         }else if(linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2') 
         && linha1.firstChild.classList.contains('jogador2') && linha0.firstChild.classList.contains('jogador2')){
             winDiv.classList.remove('none');
-            winDiv.classList.add('footer__winner');
-            jogadorWin.innerText = 'Jogador 2';
+            winDiv.classList.add('footer__winner__jogador2');
+            main.classList.add('main__opacity');
+            jogadorWin.innerText = 'Luigi';
+            jogadorWin.style.color = "#2b9b1d";
         }
     }
 }
@@ -271,12 +283,16 @@ function winnerDiagonal() {
                     if(verification1 === verification2 && verification2 === verification3 && verification3 === verification4) {
                         if(count === 0) {
                             winDiv.classList.remove('none');
-                            winDiv.classList.add('footer__winner');
-                            jogadorWin.innerText = 'Jogador 2';
+                            winDiv.classList.add('footer__winner__jogador2');
+                            main.classList.add('main__opacity');
+                            jogadorWin.innerText = 'Luigi';            
+                            jogadorWin.style.color = "#2b9b1d";
                         }else if(count === 1){
                             winDiv.classList.remove('none');
-                            winDiv.classList.add('footer__winner');
-                            jogadorWin.innerText = 'Jogador 1';
+                            winDiv.classList.add('footer__winner__jogador1');
+                            main.classList.add('main__opacity');
+                            jogadorWin.innerText = 'Mario';
+                            jogadorWin.style.color = "#fe0022"
                         }
                     }
                 }
@@ -295,12 +311,16 @@ function winnerDiagonal() {
                     if(verification1 === verification2 && verification2 === verification3 && verification3 === verification4) {
                         if(count === 0) {
                             winDiv.classList.remove('none');
-                            winDiv.classList.add('footer__winner');
-                            jogadorWin.innerText = 'Jogador 2';
+                            winDiv.classList.add('footer__winner__jogador2');
+                            main.classList.add('main__opacity');
+                            jogadorWin.innerText = 'Luigi';
+                            jogadorWin.style.color = "#2b9b1d";
                         }else if(count === 1){
                             winDiv.classList.remove('none');
-                            winDiv.classList.add('footer__winner');
-                            jogadorWin.innerText = 'Jogador 1';
+                            winDiv.classList.add('footer__winner__jogador1');
+                            main.classList.add('main__opacity');
+                            jogadorWin.innerText = 'Mario';
+                            jogadorWin.style.color = "#fe0022"
                         }
                     }
                 }
@@ -334,6 +354,7 @@ function empate(element){
     if(countEmpate>6){
         empateDiv.classList.remove('none');
         empateDiv.classList.add('footer__empate');
+        main.classList.add('main__opacity');
         jogadorWin.innerText = 'Empatou!'
     }
 }
