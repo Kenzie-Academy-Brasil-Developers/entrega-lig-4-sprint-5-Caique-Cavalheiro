@@ -57,7 +57,7 @@ function colunaSelecionada(event){
             looping = true;
         }
     }
-    winHorizontal(coluna);
+    winVertical(coluna);
     winnerDiagonal();
 }
 
@@ -74,7 +74,7 @@ function switchJogador(){
     return jogador
 }
 
-function winHorizontal(element){
+function winVertical(element){
     let linha5RowValue = element.lastChild.dataset.rows;
     let linha4RowValue = linha5RowValue-1;
     let linha3RowValue = linha4RowValue-1;
