@@ -57,6 +57,14 @@ header h1 {
     font-weight: 800;
     text-align: center;
 }
+.footer__empate{
+    width: 40%;
+    height: 70%;
+    margin-top: 10px;
+    background-image: url(../img/tie.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /* Main */
 .main{
     width: 100vw;
