@@ -57,6 +57,14 @@ header h1 {
     font-weight: 800;
     text-align: center;
 }
+.footer__empate{
+    width: 40%;
+    height: 70%;
+    margin-top: 10px;
+    background-image: url(../img/tie.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /* Main */
 .main{
     width: 100vw;
@@ -79,12 +87,14 @@ section{
     align-items: center;
 }
 .jogador1{
+    animation: movimentoBolinha 1s;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: red;
 }
 .jogador2{
+    animation: movimentoBolinha 1s;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -93,6 +103,19 @@ section{
 /* Outros */
 .none{
     display: none;
+}
+
+@keyframes movimentoBolinha {
+    0% {
+        opacity: 0;
+        transform: translateY(-30vw);
+    }
+    70% {
+        opacity: 25%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 /* Media Queries */
 @media screen and (min-width: 768px){}
