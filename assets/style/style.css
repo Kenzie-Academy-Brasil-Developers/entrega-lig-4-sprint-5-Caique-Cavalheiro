@@ -18,6 +18,8 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 10px;
+    text-align: center;
 }
 .header__title{}
 header h1 {
