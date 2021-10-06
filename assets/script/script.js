@@ -1,11 +1,25 @@
+const navbar = document.querySelector('.navbar')
 const main = document.querySelector('.main');
 const footer = document.querySelector('.footer');
+const jogar = document.querySelector('#play')
+
 const section = document.createElement('section');
 const resetButton = document.createElement('button');
 const winDiv = document.createElement('div');
 const jogadorWin = document.createElement('p');
 const empateDiv = document.createElement('div');
+const regra1 = document.createElement('p')
+const regra2 = document.createElement('p')
+const regra3 = document.createElement('p')
+const regra4 = document.createElement('p')
+const regra5 = document.createElement('p')
 
+//REGRAS DO JOGO
+regra1.innerHTML = 'Regras: <br><br> 1. Voce não fala sobre o clube; <br>'
+regra2.innerHTML = '2. Você não fala sobre o clube;'
+navbar.append(regra1, regra2, regra3, regra4, regra5)
+
+//BOTÃO RESET
 resetButton.innerText = 'Restart';
 
 section.classList.add('footer__section')
@@ -22,23 +36,32 @@ footer.appendChild(empateDiv);
 
 resetButton.addEventListener('click', function(){
     location.reload();
+
 });
 
-for(let i = 0; i < 7; i++){
-    const coluna = document.createElement('section')
-    coluna.className = 'coluna'+(i+1);
-    coluna.dataset.columns = i;
-    for(let j = 0; j < 6; j++){
-        const linha = document.createElement('div');
-        linha.className = 'linha';
-        linha.dataset.columns = i;
-        linha.dataset.rows = j;
-        coluna.dataset.rows = j;
-        coluna.appendChild(linha);
+
+//BOTÃO INICIAR O JOGO
+
+jogar.addEventListener('click', () => {
+    for(let i = 0; i < 7; i++){
+        const coluna = document.createElement('section')
+        coluna.className = 'coluna'+(i+1);
+        coluna.dataset.columns = i;
+        for(let j = 0; j < 6; j++){
+            const linha = document.createElement('div');
+            linha.className = 'linha';
+            linha.dataset.columns = i;
+            linha.dataset.rows = j;
+            coluna.dataset.rows = j;
+            coluna.appendChild(linha);
+        }
+        coluna.addEventListener('click', colunaSelecionada);
+        main.appendChild(coluna);
     }
-    coluna.addEventListener('click', colunaSelecionada);
-    main.appendChild(coluna);
-}
+    jogar.style.display = 'none'
+    navbar.style.display = 'none'
+})
+
 
 function colunaSelecionada(event){
     const coluna = event.currentTarget;
