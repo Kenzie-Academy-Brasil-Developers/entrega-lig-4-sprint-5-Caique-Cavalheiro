@@ -12,11 +12,12 @@ body{
 .header{
     width: 100vw;
     height: 5vh;
-    text-align:left ;
     background-image: url(../img/Super_Mario.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 10px;
+    text-align: center;
 }
 .header__title{}
 header h1 {
