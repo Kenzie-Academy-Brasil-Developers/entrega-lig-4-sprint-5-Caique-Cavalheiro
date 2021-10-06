@@ -175,19 +175,14 @@ function winHorizontal(parametro){
 
 //VERTICAL
 function winVertical(element){
-    let linha5RowValue = element.lastChild.dataset.rows;
-    let linha4RowValue = linha5RowValue-1;
-    let linha3RowValue = linha4RowValue-1;
-    let linha2RowValue = linha3RowValue-1;
-    let linha1RowValue = linha2RowValue-1;
-    let linha0RowValue = linha1RowValue-1;
+    let coluna = element.dataset.columns
 
-    let linha5 = document.querySelector(`div[data-rows="${linha5RowValue}"]`);
-    let linha4 = document.querySelector(`div[data-rows="${linha4RowValue}"]`);
-    let linha3 = document.querySelector(`div[data-rows="${linha3RowValue}"]`);
-    let linha2 = document.querySelector(`div[data-rows="${linha2RowValue}"]`);
-    let linha1 = document.querySelector(`div[data-rows="${linha1RowValue}"]`);
-    let linha0 = document.querySelector(`div[data-rows="${linha0RowValue}"]`);
+    let linha5 = document.querySelector(`div[data-columns="${coluna}"][data-rows="${5}"]`);
+    let linha4 = document.querySelector(`div[data-columns="${coluna}"][data-rows="${4}"]`);
+    let linha3 = document.querySelector(`div[data-columns="${coluna}"][data-rows="${3}"]`);
+    let linha2 = document.querySelector(`div[data-columns="${coluna}"][data-rows="${2}"]`);
+    let linha1 = document.querySelector(`div[data-columns="${coluna}"][data-rows="${1}"]`);
+    let linha0 = document.querySelector(`div[data-columns="${coluna}"][data-rows="${0}"]`);
 
     if(linha5.hasChildNodes()===true && linha4.hasChildNodes()===true && linha3.hasChildNodes()===true && linha2.hasChildNodes()===true){
         if(linha5.firstChild.classList.contains('jogador1') && linha4.firstChild.classList.contains('jogador1') 
