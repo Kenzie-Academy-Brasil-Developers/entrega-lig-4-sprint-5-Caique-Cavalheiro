@@ -4,6 +4,7 @@ const section = document.createElement('section');
 const resetButton = document.createElement('button');
 const winDiv = document.createElement('div');
 const jogadorWin = document.createElement('p');
+const empateDiv = document.createElement('div');
 
 resetButton.innerText = 'Restart';
 
@@ -11,11 +12,13 @@ section.classList.add('footer__section')
 resetButton.classList.add('footer__resetButton');
 winDiv.classList.add('none');
 jogadorWin.classList.add('footer__jogador');
+empateDiv.classList.add('none');
 
 footer.appendChild(section);
 section.appendChild(resetButton);
 footer.appendChild(winDiv);
 footer.appendChild(jogadorWin);
+footer.appendChild(empateDiv);
 
 resetButton.addEventListener('click', function(){
     location.reload();
@@ -59,6 +62,7 @@ function colunaSelecionada(event){
     }
     winVertical(coluna);
     winnerDiagonal();
+    empate(coluna);
 }
 
 let count =0;
@@ -182,5 +186,35 @@ function winnerDiagonal() {
                     }
                 }
         }
+    }
+}
+
+
+function empate(element){
+    let linha5RowValue = element.lastChild.dataset.rows;
+    let linha4RowValue = linha5RowValue-1;
+    let linha3RowValue = linha4RowValue-1;
+    let linha2RowValue = linha3RowValue-1;
+    let linha1RowValue = linha2RowValue-1;
+    let linha0RowValue = linha1RowValue-1;
+
+    let countEmpate =0;
+
+    for(let i=0; i< 7;i++){
+        let linha5 = document.querySelector(`div[data-columns="${i}"][data-rows="${linha5RowValue}"]`);
+        let linha4 = document.querySelector(`div[data-columns="${i}"][data-rows="${linha4RowValue}"]`);
+        let linha3 = document.querySelector(`div[data-columns="${i}"][data-rows="${linha3RowValue}"]`);
+        let linha2 = document.querySelector(`div[data-columns="${i}"][data-rows="${linha2RowValue}"]`);
+        let linha1 = document.querySelector(`div[data-columns="${i}"][data-rows="${linha1RowValue}"]`);
+        let linha0 = document.querySelector(`div[data-columns="${i}"][data-rows="${linha0RowValue}"]`);
+        if(linha5.hasChildNodes()===true && linha4.hasChildNodes()===true && linha3.hasChildNodes()===true && 
+        linha2.hasChildNodes()===true && linha1.hasChildNodes()===true && linha0.hasChildNodes()===true){
+            countEmpate +=1;
+        }
+    }
+    if(countEmpate>6){
+        empateDiv.classList.remove('none');
+        empateDiv.classList.add('footer__empate');
+        jogadorWin.innerText = 'Empatou!'
     }
 }
