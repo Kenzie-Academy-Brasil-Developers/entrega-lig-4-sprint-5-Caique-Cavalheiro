@@ -81,6 +81,11 @@ function switchJogador(){
     return jogador
 }
 
+
+
+//CONDIÇÕES DE VITÓRIA
+
+//HORIZONTAL
 function winHorizontal(parametro){
     const evento = parametro.dataset.rows
     const sectionMain = document.querySelector("main");
@@ -101,7 +106,15 @@ function winHorizontal(parametro){
         coluna3 = coluna3.className
 
         if(coluna0 === coluna1 && coluna1 === coluna2 && coluna2 === coluna3){
-            console.log('alguem ganhou')
+            if(count === 0) {
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 2';
+            }else if(count === 1){
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 1';
+            }
         }
     }
     else if(coluna1 !== null && coluna2 !== null && coluna3 !== null && coluna4 !== null){
@@ -111,7 +124,15 @@ function winHorizontal(parametro){
         coluna4 = coluna4.className
 
         if(coluna1 === coluna2 && coluna2 === coluna3 && coluna3 === coluna4){
-            console.log('alguem ganhou')
+            if(count === 0) {
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 2';
+            }else if(count === 1){
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 1';
+            }
         }
     }
     else if(coluna2 !== null && coluna3 !== null && coluna4 !== null && coluna5 !== null){
@@ -121,7 +142,15 @@ function winHorizontal(parametro){
         coluna5 = coluna5.className
 
         if(coluna2 === coluna3 && coluna3 === coluna4 && coluna4 === coluna5){
-            console.log('alguem ganhou')
+            if(count === 0) {
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 2';
+            }else if(count === 1){
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 1';
+            }
         }
     }
     else if(coluna3 !== null && coluna4 !== null && coluna5 !== null && coluna6 !== null){
@@ -131,11 +160,20 @@ function winHorizontal(parametro){
         coluna6 = coluna6.className
 
         if(coluna3 === coluna4 && coluna4 === coluna5 && coluna5 === coluna6){
-            console.log('alguem ganhou')
+            if(count === 0) {
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 2';
+            }else if(count === 1){
+                winDiv.classList.remove('none');
+                winDiv.classList.add('footer__winner');
+                jogadorWin.innerText = 'Jogador 1';
+            }
         }
     }
 }
 
+//VERTICAL
 function winVertical(element){
     let linha5RowValue = element.lastChild.dataset.rows;
     let linha4RowValue = linha5RowValue-1;
@@ -194,7 +232,7 @@ function winVertical(element){
     }
 }
 
-
+//DIAGONAL
 function winnerDiagonal() {
     const sectionMain = document.querySelector("main");
     for(let i = 0; i < sectionMain.children[i].childElementCount - 2;i++) {
