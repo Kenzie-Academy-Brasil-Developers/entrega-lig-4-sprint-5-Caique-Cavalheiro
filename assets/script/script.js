@@ -1,21 +1,40 @@
-const main = document.querySelector('.main')
+const main = document.querySelector('.main');
+const footer = document.querySelector('.footer');
+const section = document.createElement('section');
+const resetButton = document.createElement('button');
+const winDiv = document.createElement('div');
+const jogadorWin = document.createElement('p');
 
-let count =0;
-let linha;
+resetButton.innerText = 'Restart';
+
+section.classList.add('footer__section')
+resetButton.classList.add('footer__resetButton');
+winDiv.classList.add('none');
+jogadorWin.classList.add('footer__jogador');
+
+footer.appendChild(section);
+section.appendChild(resetButton);
+footer.appendChild(winDiv);
+footer.appendChild(jogadorWin);
+
+resetButton.addEventListener('click', function(){
+    location.reload();
+});
+
 for(let i = 0; i < 7; i++){
     const coluna = document.createElement('section')
-    coluna.className = 'coluna'+(i+1)
-    coluna.dataset.columns = i
+    coluna.className = 'coluna'+(i+1);
+    coluna.dataset.columns = i;
     for(let j = 0; j < 6; j++){
-        linha = document.createElement('div')
-        linha.className = 'linha'
-        linha.dataset.columns = i
-        linha.dataset.rows = j
-        coluna.dataset.rows = j
-        coluna.appendChild(linha)
+        const linha = document.createElement('div');
+        linha.className = 'linha';
+        linha.dataset.columns = i;
+        linha.dataset.rows = j;
+        coluna.dataset.rows = j;
+        coluna.appendChild(linha);
     }
-    coluna.addEventListener('click', colunaSelecionada)
-    main.appendChild(coluna)
+    coluna.addEventListener('click', colunaSelecionada);
+    main.appendChild(coluna);
 }
 
 function colunaSelecionada(event){
@@ -38,8 +57,10 @@ function colunaSelecionada(event){
             looping = true;
         }
     }
+    winHorizontal(coluna)
 }
 
+let count =0;
 function switchJogador(){
     let jogador = "";
     if(count===0){
@@ -50,4 +71,62 @@ function switchJogador(){
         count =0;
     }
     return jogador
+}
+
+function winHorizontal(element){
+    let linha5RowValue = element.lastChild.dataset.rows;
+    let linha4RowValue = linha5RowValue-1;
+    let linha3RowValue = linha4RowValue-1;
+    let linha2RowValue = linha3RowValue-1;
+    let linha1RowValue = linha2RowValue-1;
+    let linha0RowValue = linha1RowValue-1;
+
+    let linha5 = document.querySelector(`div[data-rows="${linha5RowValue}"]`);
+    let linha4 = document.querySelector(`div[data-rows="${linha4RowValue}"]`);
+    let linha3 = document.querySelector(`div[data-rows="${linha3RowValue}"]`);
+    let linha2 = document.querySelector(`div[data-rows="${linha2RowValue}"]`);
+    let linha1 = document.querySelector(`div[data-rows="${linha1RowValue}"]`);
+    let linha0 = document.querySelector(`div[data-rows="${linha0RowValue}"]`);
+
+    if(linha5.hasChildNodes()===true && linha4.hasChildNodes()===true && linha3.hasChildNodes()===true && linha2.hasChildNodes()===true){
+        if(linha5.firstChild.classList.contains('jogador1') && linha4.firstChild.classList.contains('jogador1') 
+        && linha3.firstChild.classList.contains('jogador1') && linha2.firstChild.classList.contains('jogador1')){
+            winDiv.classList.remove('none');
+            winDiv.classList.add('footer__winner');
+            jogadorWin.innerText = 'Jogador 1';
+        }else if(linha5.firstChild.classList.contains('jogador2') && linha4.firstChild.classList.contains('jogador2') 
+        && linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2')){
+            winDiv.classList.remove('none');
+            winDiv.classList.add('footer__winner');
+            jogadorWin.innerText = 'Jogador 2';
+        }
+    }
+
+    if(linha4.hasChildNodes()===true && linha3.hasChildNodes()===true && linha2.hasChildNodes()===true && linha1.hasChildNodes()===true){
+        if(linha4.firstChild.classList.contains('jogador1') && linha3.firstChild.classList.contains('jogador1') 
+        && linha2.firstChild.classList.contains('jogador1') && linha1.firstChild.classList.contains('jogador1')){
+            winDiv.classList.remove('none');
+            winDiv.classList.add('footer__winner');
+            jogadorWin.innerText = 'Jogador 1';
+        }else if(linha4.firstChild.classList.contains('jogador2') && linha3.firstChild.classList.contains('jogador2') 
+        && linha2.firstChild.classList.contains('jogador2') && linha1.firstChild.classList.contains('jogador2')){
+            winDiv.classList.remove('none');
+            winDiv.classList.add('footer__winner');
+            jogadorWin.innerText = 'Jogador 2';
+        }
+    }
+
+    if(linha3.hasChildNodes()===true && linha2.hasChildNodes()===true && linha1.hasChildNodes()===true && linha0.hasChildNodes()===true){
+        if(linha3.firstChild.classList.contains('jogador1') && linha2.firstChild.classList.contains('jogador1') 
+        && linha1.firstChild.classList.contains('jogador1') && linha0.firstChild.classList.contains('jogador1')){
+            winDiv.classList.remove('none');
+            winDiv.classList.add('footer__winner');
+            jogadorWin.innerText = 'Jogador 1';
+        }else if(linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2') 
+        && linha1.firstChild.classList.contains('jogador2') && linha0.firstChild.classList.contains('jogador2')){
+            winDiv.classList.remove('none');
+            winDiv.classList.add('footer__winner');
+            jogadorWin.innerText = 'Jogador 2';
+        }
+    }
 }
