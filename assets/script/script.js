@@ -57,7 +57,8 @@ function colunaSelecionada(event){
             looping = true;
         }
     }
-    winHorizontal(coluna)
+    winHorizontal(coluna);
+    winnerDiagonal();
 }
 
 let count =0;
@@ -127,6 +128,59 @@ function winHorizontal(element){
             winDiv.classList.remove('none');
             winDiv.classList.add('footer__winner');
             jogadorWin.innerText = 'Jogador 2';
+        }
+    }
+}
+
+
+function winnerDiagonal() {
+    const sectionMain = document.querySelector("main");
+    for(let i = 0; i < sectionMain.children[i].childElementCount - 2;i++) {
+        for(let j = 5; j >= 3; j--) {
+            if(sectionMain.children[i].children[j].children[0] !== undefined 
+                && sectionMain.children[i + 1].children[j - 1].children[0] !== undefined
+                && sectionMain.children[i + 2].children[j - 2].children[0] !== undefined
+                && sectionMain.children[i + 3].children[j - 3].children[0] !== undefined) {
+                    const verification1 = sectionMain.children[i].children[j].children[0].className;
+                    const verification2 = sectionMain.children[i + 1].children[j - 1].children[0].className;
+                    const verification3 = sectionMain.children[i + 2].children[j - 2].children[0].className;
+                    const verification4 = sectionMain.children[i + 3].children[j - 3].children[0].className;
+                    if(verification1 === verification2 && verification2 === verification3 && verification3 === verification4) {
+                        if(count === 0) {
+                            winDiv.classList.remove('none');
+                            winDiv.classList.add('footer__winner');
+                            jogadorWin.innerText = 'Jogador 2';
+                        }else if(count === 1){
+                            winDiv.classList.remove('none');
+                            winDiv.classList.add('footer__winner');
+                            jogadorWin.innerText = 'Jogador 1';
+                        }
+                    }
+                }
+        }
+    }
+    for(let x = 6; x >= 3; x--) {
+        for(let z = 5; z >= 3; z--) {
+            if(sectionMain.children[x].children[z].children[0] !== undefined
+                && sectionMain.children[x - 1].children[z - 1].children[0] !== undefined
+                && sectionMain.children[x - 2].children[z - 2].children[0] !== undefined
+                && sectionMain.children[x - 3].children[z - 3].children[0] !== undefined){
+                    const verification1 = sectionMain.children[x].children[z].children[0].className;
+                    const verification2 = sectionMain.children[x - 1].children[z - 1].children[0].className;
+                    const verification3 = sectionMain.children[x - 2].children[z - 2].children[0].className;
+                    const verification4 = sectionMain.children[x - 3].children[z - 3].children[0].className;
+                    if(verification1 === verification2 && verification2 === verification3 && verification3 === verification4) {
+                        if(count === 0) {
+                            winDiv.classList.remove('none');
+                            winDiv.classList.add('footer__winner');
+                            jogadorWin.innerText = 'Jogador 2';
+                        }else if(count === 1){
+                            winDiv.classList.remove('none');
+                            winDiv.classList.add('footer__winner');
+                            jogadorWin.innerText = 'Jogador 1';
+                        }
+                    }
+                }
         }
     }
 }
