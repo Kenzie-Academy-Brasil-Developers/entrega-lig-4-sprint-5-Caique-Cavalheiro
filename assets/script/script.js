@@ -29,7 +29,6 @@ jogadorWin.classList.add('footer__jogador');
 empateDiv.classList.add('none');
 
 footer.appendChild(section);
-section.appendChild(resetButton);
 footer.appendChild(winDiv);
 footer.appendChild(jogadorWin);
 footer.appendChild(empateDiv);
@@ -60,6 +59,8 @@ jogar.addEventListener('click', () => {
     }
     jogar.style.display = 'none'
     navbar.style.display = 'none'
+
+    section.appendChild(resetButton);
 })
 
 
@@ -123,12 +124,13 @@ function winHorizontal(parametro){
 
     if(coluna0 !== null && coluna1 !== null && coluna2 !== null && coluna3 !== null){
 
-        coluna0 = coluna0.className
-        coluna1 = coluna1.className
-        coluna2 = coluna2.className
-        coluna3 = coluna3.className
+        coluna0 = sectionMain.children[0].children[evento].firstChild.className
+        coluna1 = sectionMain.children[1].children[evento].firstChild.className
+        coluna2 = sectionMain.children[2].children[evento].firstChild.className
+        coluna3 = sectionMain.children[3].children[evento].firstChild.className
 
-        if(coluna0 === coluna1 && coluna1 === coluna2 && coluna2 === coluna3){
+
+        if(coluna0 === coluna1 && coluna1 === coluna2 && coluna2 === coluna3 && coluna0 === coluna3){
             if(count === 0) {
                 winDiv.classList.remove('none');
                 winDiv.classList.add('footer__winner');
@@ -140,13 +142,14 @@ function winHorizontal(parametro){
             }
         }
     }
-    else if(coluna1 !== null && coluna2 !== null && coluna3 !== null && coluna4 !== null){
-        coluna1 = coluna1.className
-        coluna2 = coluna2.className
-        coluna3 = coluna3.className
-        coluna4 = coluna4.className
+    if(coluna1 !== null && coluna2 !== null && coluna3 !== null && coluna4 !== null){
+        coluna1 = sectionMain.children[1].children[evento].firstChild.className
+        coluna2 = sectionMain.children[2].children[evento].firstChild.className
+        coluna3 = sectionMain.children[3].children[evento].firstChild.className
+        coluna4 = sectionMain.children[4].children[evento].firstChild.className
 
-        if(coluna1 === coluna2 && coluna2 === coluna3 && coluna3 === coluna4){
+
+        if(coluna1 === coluna2 && coluna2 === coluna3 && coluna3 === coluna4 && coluna1 === coluna4){
             if(count === 0) {
                 winDiv.classList.remove('none');
                 winDiv.classList.add('footer__winner');
@@ -158,13 +161,14 @@ function winHorizontal(parametro){
             }
         }
     }
-    else if(coluna2 !== null && coluna3 !== null && coluna4 !== null && coluna5 !== null){
-        coluna2 = coluna2.className
-        coluna3 = coluna3.className
-        coluna4 = coluna4.className
-        coluna5 = coluna5.className
+    if(coluna2 !== null && coluna3 !== null && coluna4 !== null && coluna5 !== null){
+        coluna2 = sectionMain.children[2].children[evento].firstChild.className
+        coluna3 = sectionMain.children[3].children[evento].firstChild.className
+        coluna4 = sectionMain.children[4].children[evento].firstChild.className
+        coluna5 = sectionMain.children[5].children[evento].firstChild.className
 
-        if(coluna2 === coluna3 && coluna3 === coluna4 && coluna4 === coluna5){
+
+        if(coluna2 === coluna3 && coluna3 === coluna4 && coluna4 === coluna5 && coluna2 === coluna5){
             if(count === 0) {
                 winDiv.classList.remove('none');
                 winDiv.classList.add('footer__winner');
@@ -176,13 +180,14 @@ function winHorizontal(parametro){
             }
         }
     }
-    else if(coluna3 !== null && coluna4 !== null && coluna5 !== null && coluna6 !== null){
-        coluna3 = coluna3.className
-        coluna4 = coluna4.className
-        coluna5 = coluna5.className
-        coluna6 = coluna6.className
+    if(coluna3 !== null && coluna4 !== null && coluna5 !== null && coluna6 !== null){
+        coluna3 = sectionMain.children[3].children[evento].firstChild.className
+        coluna4 = sectionMain.children[4].children[evento].firstChild.className
+        coluna5 = sectionMain.children[5].children[evento].firstChild.className
+        coluna6 = sectionMain.children[6].children[evento].firstChild.className
 
-        if(coluna3 === coluna4 && coluna4 === coluna5 && coluna5 === coluna6){
+
+        if(coluna3 === coluna4 && coluna4 === coluna5 && coluna5 === coluna6 && coluna3 === coluna6){
             if(count === 0) {
                 winDiv.classList.remove('none');
                 winDiv.classList.add('footer__winner');
