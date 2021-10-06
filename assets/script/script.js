@@ -8,16 +8,15 @@ const resetButton = document.createElement('button');
 const winDiv = document.createElement('div');
 const jogadorWin = document.createElement('p');
 const empateDiv = document.createElement('div');
-const regra1 = document.createElement('p')
+const regra1 = document.createElement('h1')
 const regra2 = document.createElement('p')
 const regra3 = document.createElement('p')
-const regra4 = document.createElement('p')
-const regra5 = document.createElement('p')
 
 //REGRAS DO JOGO
-regra1.innerHTML = 'Regras: <br><br> 1. Voce não fala sobre o clube; <br>'
-regra2.innerHTML = '2. Você não fala sobre o clube;'
-navbar.append(regra1, regra2, regra3, regra4, regra5)
+regra1.innerHTML = 'Regras:'
+regra2.innerHTML = `1.Ganha o jogo quem conseguir colocar 4 figuras iguais em sequência na ${'VERTICAL'.bold()}, ${'HORIZONTAL'.bold()} ou ${'DIAGONAL'.bold()}`
+regra3.innerHTML = '2. Você não fala sobre o clube'
+navbar.append(regra1, regra2, regra3)
 
 //BOTÃO RESET
 resetButton.innerText = 'Restart';

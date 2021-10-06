@@ -33,13 +33,18 @@ header h1 {
 }
 
 .navbar{
-    height: 314px;
+    background-color: white;
+    margin-top: 90px;
+    opacity: 60%;
+    height: 250px;
     width: 90%;
     border: 1px solid black;
     display: inline-table;
 }
 
 .navbar p{
+    text-align: left;
+    padding: 10px 15px;
     font-size: 20px;
 }
 
@@ -171,5 +176,12 @@ section{
 @media screen and (min-width:1440px){
     body{
         background-image: url(../img/background3.jpg);
+    }
+    .navbar{
+        width: 70%;
+    }
+    .navbar p{
+        padding: 10px 100px;
+        font-size: 24px;
     }
 }
