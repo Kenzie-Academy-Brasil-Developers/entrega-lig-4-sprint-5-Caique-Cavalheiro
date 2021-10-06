@@ -44,16 +44,19 @@ function colunaSelecionada(event){
     const coluna = event.currentTarget;
     let looping = false;
     let number = 0;
+
     while(looping === false){
         number++;
         if(number <= coluna.childElementCount){
-            if(coluna.children[coluna.childElementCount-number].hasChildNodes() ===false){
+            if(coluna.children[coluna.childElementCount-number].hasChildNodes() === false){
                 let jogador = switchJogador();
                 const pecas = document.createElement('div');
                 pecas.classList.add(jogador);
                 coluna.children[coluna.childElementCount-number].appendChild(pecas);
                 looping = true;
-                number = 0;
+
+                winHorizontal(coluna.children[coluna.childElementCount-number])
+
             }
         }
         else{
@@ -76,6 +79,61 @@ function switchJogador(){
         count =0;
     }
     return jogador
+}
+
+function winHorizontal(parametro){
+    const evento = parametro.dataset.rows
+    const sectionMain = document.querySelector("main");
+
+    let coluna0 = sectionMain.children[0].children[evento].firstChild
+    let coluna1 = sectionMain.children[1].children[evento].firstChild
+    let coluna2 = sectionMain.children[2].children[evento].firstChild
+    let coluna3 = sectionMain.children[3].children[evento].firstChild
+    let coluna4 = sectionMain.children[4].children[evento].firstChild
+    let coluna5 = sectionMain.children[5].children[evento].firstChild
+    let coluna6 = sectionMain.children[6].children[evento].firstChild
+
+    if(coluna0 !== null && coluna1 !== null && coluna2 !== null && coluna3 !== null){
+
+        coluna0 = coluna0.className
+        coluna1 = coluna1.className
+        coluna2 = coluna2.className
+        coluna3 = coluna3.className
+
+        if(coluna0 === coluna1 && coluna1 === coluna2 && coluna2 === coluna3){
+            console.log('alguem ganhou')
+        }
+    }
+    else if(coluna1 !== null && coluna2 !== null && coluna3 !== null && coluna4 !== null){
+        coluna1 = coluna1.className
+        coluna2 = coluna2.className
+        coluna3 = coluna3.className
+        coluna4 = coluna4.className
+
+        if(coluna1 === coluna2 && coluna2 === coluna3 && coluna3 === coluna4){
+            console.log('alguem ganhou')
+        }
+    }
+    else if(coluna2 !== null && coluna3 !== null && coluna4 !== null && coluna5 !== null){
+        coluna2 = coluna2.className
+        coluna3 = coluna3.className
+        coluna4 = coluna4.className
+        coluna5 = coluna5.className
+
+        if(coluna2 === coluna3 && coluna3 === coluna4 && coluna4 === coluna5){
+            console.log('alguem ganhou')
+        }
+    }
+    else if(coluna3 !== null && coluna4 !== null && coluna5 !== null && coluna6 !== null){
+        coluna3 = coluna3.className
+        coluna4 = coluna4.className
+        coluna5 = coluna5.className
+        coluna6 = coluna6.className
+
+        if(coluna3 === coluna4 && coluna4 === coluna5 && coluna5 === coluna6){
+            console.log('alguem ganhou')
+        }
+    }
 }
 
 function winVertical(element){
