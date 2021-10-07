@@ -8,7 +8,7 @@ const resetButton = document.createElement('button');
 const winDiv = document.createElement('div');
 const jogadorWin = document.createElement('p');
 const empateDiv = document.createElement('div');
-const regra1 = document.createElement('h1')
+const regra1 = document.createElement('h2')
 const regra2 = document.createElement('p')
 const regra3 = document.createElement('p')
 
@@ -40,6 +40,10 @@ resetButton.addEventListener('click', function(){
 //BOTÃO INICIAR O JOGO
 
 jogar.addEventListener('click', () => {
+    
+    jogar.style.display = 'none'
+    navbar.style.display = 'none'
+    
     for(let i = 0; i < 7; i++){
         const coluna = document.createElement('section')
         coluna.className = 'coluna'+(i+1);
@@ -55,8 +59,6 @@ jogar.addEventListener('click', () => {
         coluna.addEventListener('click', colunaSelecionada);
         main.appendChild(coluna);
     }
-    jogar.style.display = 'none'
-    navbar.style.display = 'none'
 
     section.appendChild(resetButton);
 })

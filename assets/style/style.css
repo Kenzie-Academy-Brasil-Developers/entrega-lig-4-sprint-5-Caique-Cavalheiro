@@ -31,9 +31,7 @@ body{
     font-weight: 800;
     text-align:left;
     margin: 10px 0 0 20px;
-    background: linear-gradient(to right,#40E0D0 25px,#FF8C00 15px,#FF0080 33%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffff01;
 }
 #play{
     width: 30%;
@@ -43,22 +41,28 @@ body{
     border-radius: 5px;
     background-color: #ffff01;
     border: 2px solid #000;
-    box-shadow: 0px 15px 0px 0px rgba(0,0,0,0.7);
+    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.7);
     transition: 2000ms linear;
 }
 #play:active{
     position: relative;
     top: 5px;
-    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.7);
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.7);
 }
 .navbar{
     width: 90%;
     height: 314px;
-    text-align: center;
+    text-align: justify;
     margin: 15px;
     border: 1px solid #000;
     display: inline-table;
     background-color: rgba(206, 206, 206, .6);
+}
+.navbar h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 800;
 }
 .navbar p{
     box-sizing: border-box;
@@ -92,13 +96,13 @@ body{
     border-radius: 5px;
     background-color: #ffff01;
     border: 2px solid #000;
-    box-shadow: 0px 15px 0px 0px rgba(0,0,0,0.7);
+    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.7);
     transition: 2000ms linear;
 }
 .footer__resetButton:active{
     position: relative;
     top: 5px;
-    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.7);
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.7);
 }
 .footer__winner__jogador1{
     width: 40%;
@@ -156,6 +160,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(206, 206, 206, .4);
 }
 .jogador1{
     animation: movimentoBolinha 1s;
@@ -245,8 +250,11 @@ section{
     body{
         background-image: url(../img/background3.jpg);
     }
+    #play{
+        margin: 30px;
+    }
     .navbar{
-        width: 70%;
+        margin-top: 50px;
     }
     .navbar p{
         padding: 10px 100px;
