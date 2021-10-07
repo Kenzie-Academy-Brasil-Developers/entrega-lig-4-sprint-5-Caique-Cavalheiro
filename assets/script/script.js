@@ -35,7 +35,6 @@ footer.appendChild(empateDiv);
 
 resetButton.addEventListener('click', function(){
     location.reload();
-
 });
 
 
@@ -133,12 +132,16 @@ function winHorizontal(parametro){
         if(coluna0 === coluna1 && coluna1 === coluna2 && coluna2 === coluna3 && coluna0 === coluna3){
             if(count === 0) {
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 2';
+                winDiv.classList.add('footer__winner__jogador2');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Luigi';
+                jogadorWin.style.color = "#2b9b1d";
             }else if(count === 1){
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 1';
+                winDiv.classList.add('footer__winner__jogador1');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Mario';
+                jogadorWin.style.color = "#fe0022"
             }
         }
     }
@@ -152,12 +155,16 @@ function winHorizontal(parametro){
         if(coluna1 === coluna2 && coluna2 === coluna3 && coluna3 === coluna4 && coluna1 === coluna4){
             if(count === 0) {
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 2';
+                winDiv.classList.add('footer__winner__jogador2');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Luigi';
+                jogadorWin.style.color = "#2b9b1d";
             }else if(count === 1){
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 1';
+                winDiv.classList.add('footer__winner__jogador1');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Mario';
+                jogadorWin.style.color = "#fe0022"
             }
         }
     }
@@ -171,12 +178,16 @@ function winHorizontal(parametro){
         if(coluna2 === coluna3 && coluna3 === coluna4 && coluna4 === coluna5 && coluna2 === coluna5){
             if(count === 0) {
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 2';
+                winDiv.classList.add('footer__winner__jogador2');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Luigi';
+                jogadorWin.style.color = "#2b9b1d";
             }else if(count === 1){
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 1';
+                winDiv.classList.add('footer__winner__jogador1');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Mario';
+                jogadorWin.style.color = "#fe0022"
             }
         }
     }
@@ -190,12 +201,16 @@ function winHorizontal(parametro){
         if(coluna3 === coluna4 && coluna4 === coluna5 && coluna5 === coluna6 && coluna3 === coluna6){
             if(count === 0) {
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 2';
+                winDiv.classList.add('footer__winner__jogador2');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Luigi';
+                jogadorWin.style.color = "#2b9b1d";
             }else if(count === 1){
                 winDiv.classList.remove('none');
-                winDiv.classList.add('footer__winner');
-                jogadorWin.innerText = 'Jogador 1';
+                winDiv.classList.add('footer__winner__jogador1');
+                main.classList.add('main__opacity');
+                jogadorWin.innerText = 'Mario';
+                jogadorWin.style.color = "#fe0022"
             }
         }
     }
