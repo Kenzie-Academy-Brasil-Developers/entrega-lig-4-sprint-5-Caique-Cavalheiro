@@ -132,12 +132,14 @@ body{
     text-align:center;
 }
 .footer__empate{
-    width: 40%;
-    height: 70%;
-    margin-top: 10px;
+    width: 75%;
+    height: 60vh;
+    position:absolute;
+    top:20%;
     background-image: url(../img/tie.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Main */
@@ -205,6 +207,9 @@ section{
     body{
         background-image: url(../img/background.jpg);
     }
+    .navbar{
+        margin-top:30px;
+    }
     .header__title{
         margin: 15px 0 0 80px;
     }
@@ -222,6 +227,9 @@ section{
     }
     #play{
         width: 150px;
+    }
+    .footer__empate{
+        width: 50%;
     }
     .footer__resetButton{
         width: 150px;
@@ -243,6 +251,9 @@ section{
     .jogador2{
         width: 50px;
         height: 50px;
+    }
+    .footer__empate{
+        width: 45%;
     }
 }
 
@@ -277,6 +288,10 @@ section{
     }
     .footer__jogador{
         font-size: 120px;
+    }
+    .footer__empate{
+        width: 40%;
+        height: 50vh;
     }
     .footer__resetButton{
         margin-top: 130px;
