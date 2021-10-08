@@ -48,13 +48,13 @@ function winnerDiagonal() {
                             sectionMain.children[i + 1].children[j - 1].children[0].classList.add("luigiTransition")
                             sectionMain.children[i + 2].children[j - 2].children[0].classList.add("luigiTransition")
                             sectionMain.children[i + 3].children[j - 3].children[0].classList.add("luigiTransition")
-                            setTimeout(timeOut1,2.0 * 1000)
+                            setTimeout(timeOut1,1.0 * 1000)
                         }else if(count === 1){
                             sectionMain.children[i].children[j].children[0].classList.add("marioTransition")
                             sectionMain.children[i + 1].children[j - 1].children[0].classList.add("marioTransition")
                             sectionMain.children[i + 2].children[j - 2].children[0].classList.add("marioTransition")
                             sectionMain.children[i + 3].children[j - 3].children[0].classList.add("marioTransition")
-                            setTimeout(timeOut2,2.0 * 1000)
+                            setTimeout(timeOut2,1.0 * 1000)
                         }
                     }
                 }
@@ -76,13 +76,13 @@ function winnerDiagonal() {
                             sectionMain.children[x - 1].children[z - 1].children[0].classList.add("luigiTransition")
                             sectionMain.children[x - 2].children[z - 2].children[0].classList.add("luigiTransition")
                             sectionMain.children[x - 3].children[z - 3].children[0].classList.add("luigiTransition")
-                            setTimeout(timeOut1,2.0 * 1000)
+                            setTimeout(timeOut1,1.0 * 1000)
                         }else if(count === 1){
                             sectionMain.children[x].children[z].children[0].classList.add("marioTransition")
                             sectionMain.children[x - 1].children[z - 1].children[0].classList.add("marioTransition")
                             sectionMain.children[x - 2].children[z - 2].children[0].classList.add("marioTransition")
                             sectionMain.children[x - 3].children[z - 3].children[0].classList.add("marioTransition")
-                            setTimeout(timeOut2,2.0 * 1000)
+                            setTimeout(timeOut2,1.0 * 1000)
                         }
                     }
                 }
@@ -109,14 +109,14 @@ function winVertical(element){
             linha3.firstChild.classList.add("marioTransition")
             linha2.firstChild.classList.add("marioTransition")
             x = false;
-            setTimeout(timeOut2,2.0 * 1000)
+            setTimeout(timeOut2,1.0 * 1000)
         }else if(linha5.firstChild.classList.contains('jogador2') && linha4.firstChild.classList.contains('jogador2') 
         && linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2')){
             linha5.firstChild.classList.add("luigiTransition")
             linha4.firstChild.classList.add("luigiTransition")
             linha3.firstChild.classList.add("luigiTransition")
             linha2.firstChild.classList.add("luigiTransition")
-            setTimeout(timeOut1,2.0 * 1000)
+            setTimeout(timeOut1,1.0 * 1000)
         }
     }
 
@@ -127,14 +127,14 @@ function winVertical(element){
             linha3.firstChild.classList.add("marioTransition")
             linha2.firstChild.classList.add("marioTransition")
             linha1.firstChild.classList.add("marioTransition")
-            setTimeout(timeOut2,2.0 * 1000)
+            setTimeout(timeOut2,1.0 * 1000)
         }else if(linha4.firstChild.classList.contains('jogador2') && linha3.firstChild.classList.contains('jogador2') 
         && linha2.firstChild.classList.contains('jogador2') && linha1.firstChild.classList.contains('jogador2')){
             linha4.firstChild.classList.add("luigiTransition")
             linha3.firstChild.classList.add("luigiTransition")
             linha2.firstChild.classList.add("luigiTransition")
             linha1.firstChild.classList.add("luigiTransition")
-            setTimeout(timeOut1,2.0 * 1000)
+            setTimeout(timeOut1,1.0 * 1000)
         }
     }
 
@@ -145,14 +145,14 @@ function winVertical(element){
             linha2.firstChild.classList.add("marioTransition")
             linha1.firstChild.classList.add("marioTransition")
             linha0.firstChild.classList.add("marioTransition")
-            setTimeout(timeOut2,2.0 * 1000)
+            setTimeout(timeOut2,1.0 * 1000)
         }else if(linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2') 
         && linha1.firstChild.classList.contains('jogador2') && linha0.firstChild.classList.contains('jogador2')){
             linha3.firstChild.classList.add("luigiTransition")
             linha2.firstChild.classList.add("luigiTransition")
             linha1.firstChild.classList.add("luigiTransition")
             linha0.firstChild.classList.add("luigiTransition")
-            setTimeout(timeOut1,2.0 * 1000)
+            setTimeout(timeOut1,1.0 * 1000)
         }
     }
 }
@@ -184,13 +184,13 @@ function winHorizontal(parametro){
                 sectionMain.children[1].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
-                setTimeout(timeOut1,2.0 * 1000)
+                setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
                 sectionMain.children[0].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[1].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
-                setTimeout(timeOut2,2.0 * 1000)
+                setTimeout(timeOut2,1.0 * 1000)
             }
         }
     }
@@ -207,13 +207,13 @@ function winHorizontal(parametro){
                 sectionMain.children[2].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("luigiTransition")
-                setTimeout(timeOut1,2.0 * 1000)
+                setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
                 sectionMain.children[1].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("marioTransition")
-                setTimeout(timeOut2,2.0 * 1000)
+                setTimeout(timeOut2,1.0 * 1000)
             }
         }
     }
@@ -230,13 +230,13 @@ function winHorizontal(parametro){
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("luigiTransition")
-                setTimeout(timeOut1,2.0 * 1000)
+                setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
                 sectionMain.children[2].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("marioTransition")
-                setTimeout(timeOut2,2.0 * 1000)
+                setTimeout(timeOut2,1.0 * 1000)
             }
         }
     }
@@ -253,13 +253,13 @@ function winHorizontal(parametro){
                 sectionMain.children[4].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[6].children[evento].firstChild.classList.add("luigiTransition")
-                setTimeout(timeOut1,2.0 * 1000)
+                setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[6].children[evento].firstChild.classList.add("marioTransition")
-                setTimeout(timeOut2,2.0 * 1000)
+                setTimeout(timeOut2,1.0 * 1000)
             }
         }
     }
