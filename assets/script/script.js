@@ -35,7 +35,6 @@ footer.appendChild(empateDiv);
 
 
 //Seleciona coluna, adiciona img a ultima div vazia e executa funções de vitória.
-
 function colunaSelecionada(event){
     const coluna = event.currentTarget;
     let looping = false;
