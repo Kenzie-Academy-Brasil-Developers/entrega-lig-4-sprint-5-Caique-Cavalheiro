@@ -44,12 +44,14 @@ function winnerDiagonal() {
                     const verification4 = sectionMain.children[i + 3].children[j - 3].children[0].className;
                     if(verification1 === verification2 && verification2 === verification3 && verification3 === verification4) {
                         if(count === 0) {
+                            desabilitarEvent ()
                             sectionMain.children[i].children[j].children[0].classList.add("luigiTransition")
                             sectionMain.children[i + 1].children[j - 1].children[0].classList.add("luigiTransition")
                             sectionMain.children[i + 2].children[j - 2].children[0].classList.add("luigiTransition")
                             sectionMain.children[i + 3].children[j - 3].children[0].classList.add("luigiTransition")
                             setTimeout(timeOut1,1.0 * 1000)
                         }else if(count === 1){
+                            desabilitarEvent ()
                             sectionMain.children[i].children[j].children[0].classList.add("marioTransition")
                             sectionMain.children[i + 1].children[j - 1].children[0].classList.add("marioTransition")
                             sectionMain.children[i + 2].children[j - 2].children[0].classList.add("marioTransition")
@@ -104,6 +106,7 @@ function winVertical(element){
     if(linha5.hasChildNodes()===true && linha4.hasChildNodes()===true && linha3.hasChildNodes()===true && linha2.hasChildNodes()===true){
         if(linha5.firstChild.classList.contains('jogador1') && linha4.firstChild.classList.contains('jogador1') 
         && linha3.firstChild.classList.contains('jogador1') && linha2.firstChild.classList.contains('jogador1')){
+            desabilitarEvent ()
             linha5.firstChild.classList.add("marioTransition")
             linha4.firstChild.classList.add("marioTransition")
             linha3.firstChild.classList.add("marioTransition")
@@ -112,6 +115,7 @@ function winVertical(element){
             setTimeout(timeOut2,1.0 * 1000)
         }else if(linha5.firstChild.classList.contains('jogador2') && linha4.firstChild.classList.contains('jogador2') 
         && linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2')){
+            desabilitarEvent ()
             linha5.firstChild.classList.add("luigiTransition")
             linha4.firstChild.classList.add("luigiTransition")
             linha3.firstChild.classList.add("luigiTransition")
@@ -123,6 +127,7 @@ function winVertical(element){
     if(linha4.hasChildNodes()===true && linha3.hasChildNodes()===true && linha2.hasChildNodes()===true && linha1.hasChildNodes()===true){
         if(linha4.firstChild.classList.contains('jogador1') && linha3.firstChild.classList.contains('jogador1') 
         && linha2.firstChild.classList.contains('jogador1') && linha1.firstChild.classList.contains('jogador1')){
+            desabilitarEvent ()
             linha4.firstChild.classList.add("marioTransition")
             linha3.firstChild.classList.add("marioTransition")
             linha2.firstChild.classList.add("marioTransition")
@@ -130,6 +135,7 @@ function winVertical(element){
             setTimeout(timeOut2,1.0 * 1000)
         }else if(linha4.firstChild.classList.contains('jogador2') && linha3.firstChild.classList.contains('jogador2') 
         && linha2.firstChild.classList.contains('jogador2') && linha1.firstChild.classList.contains('jogador2')){
+            desabilitarEvent ()
             linha4.firstChild.classList.add("luigiTransition")
             linha3.firstChild.classList.add("luigiTransition")
             linha2.firstChild.classList.add("luigiTransition")
@@ -141,6 +147,7 @@ function winVertical(element){
     if(linha3.hasChildNodes()===true && linha2.hasChildNodes()===true && linha1.hasChildNodes()===true && linha0.hasChildNodes()===true){
         if(linha3.firstChild.classList.contains('jogador1') && linha2.firstChild.classList.contains('jogador1') 
         && linha1.firstChild.classList.contains('jogador1') && linha0.firstChild.classList.contains('jogador1')){
+            desabilitarEvent ()
             linha3.firstChild.classList.add("marioTransition")
             linha2.firstChild.classList.add("marioTransition")
             linha1.firstChild.classList.add("marioTransition")
@@ -148,6 +155,7 @@ function winVertical(element){
             setTimeout(timeOut2,1.0 * 1000)
         }else if(linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2') 
         && linha1.firstChild.classList.contains('jogador2') && linha0.firstChild.classList.contains('jogador2')){
+            desabilitarEvent ()
             linha3.firstChild.classList.add("luigiTransition")
             linha2.firstChild.classList.add("luigiTransition")
             linha1.firstChild.classList.add("luigiTransition")
@@ -180,12 +188,14 @@ function winHorizontal(parametro){
 
         if(coluna0 === coluna1 && coluna1 === coluna2 && coluna2 === coluna3 && coluna0 === coluna3){
             if(count === 0) {
+                desabilitarEvent ()
                 sectionMain.children[0].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[1].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
                 setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
+                desabilitarEvent ()
                 sectionMain.children[0].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[1].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("marioTransition")
@@ -203,12 +213,14 @@ function winHorizontal(parametro){
 
         if(coluna1 === coluna2 && coluna2 === coluna3 && coluna3 === coluna4 && coluna1 === coluna4){
             if(count === 0) {
+                desabilitarEvent ()
                 sectionMain.children[1].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("luigiTransition")
                 setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
+                desabilitarEvent ()
                 sectionMain.children[1].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[2].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
@@ -226,12 +238,14 @@ function winHorizontal(parametro){
 
         if(coluna2 === coluna3 && coluna3 === coluna4 && coluna4 === coluna5 && coluna2 === coluna5){
             if(count === 0) {
+                desabilitarEvent ()
                 sectionMain.children[2].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("luigiTransition")
                 setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
+                desabilitarEvent ()
                 sectionMain.children[2].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("marioTransition")
@@ -249,12 +263,14 @@ function winHorizontal(parametro){
 
         if(coluna3 === coluna4 && coluna4 === coluna5 && coluna5 === coluna6 && coluna3 === coluna6){
             if(count === 0) {
+                desabilitarEvent ()
                 sectionMain.children[3].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("luigiTransition")
                 sectionMain.children[6].children[evento].firstChild.classList.add("luigiTransition")
                 setTimeout(timeOut1,1.0 * 1000)
             }else if(count === 1){
+                desabilitarEvent ()
                 sectionMain.children[3].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[4].children[evento].firstChild.classList.add("marioTransition")
                 sectionMain.children[5].children[evento].firstChild.classList.add("marioTransition")
