@@ -108,6 +108,7 @@ function winVertical(element){
             linha4.firstChild.classList.add("marioTransition")
             linha3.firstChild.classList.add("marioTransition")
             linha2.firstChild.classList.add("marioTransition")
+            x = false;
             setTimeout(timeOut2,2.0 * 1000)
         }else if(linha5.firstChild.classList.contains('jogador2') && linha4.firstChild.classList.contains('jogador2') 
         && linha3.firstChild.classList.contains('jogador2') && linha2.firstChild.classList.contains('jogador2')){

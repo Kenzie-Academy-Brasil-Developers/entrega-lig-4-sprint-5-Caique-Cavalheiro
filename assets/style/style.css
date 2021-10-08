@@ -279,6 +279,9 @@ section{
 }
 
 @media screen and (min-width:1440px){
+    .main{
+        height: 70vh;
+    }
     body{
         background-image: url(../img/background3.jpg);
     }
