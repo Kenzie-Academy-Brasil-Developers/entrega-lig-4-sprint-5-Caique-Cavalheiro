@@ -33,7 +33,9 @@ footer.appendChild(winDiv);
 footer.appendChild(jogadorWin);
 footer.appendChild(empateDiv);
 
+
 //Seleciona coluna, adiciona img a ultima div vazia e executa funções de vitória.
+
 function colunaSelecionada(event){
     const coluna = event.currentTarget;
     let looping = false;
@@ -61,6 +63,7 @@ function colunaSelecionada(event){
     winnerDiagonal();
     empate(coluna);
 }
+
 
 //TROCA DE JOGADOR
 let count =0;

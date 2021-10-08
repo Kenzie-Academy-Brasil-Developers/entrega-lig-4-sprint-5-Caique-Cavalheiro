@@ -202,6 +202,27 @@ section{
         opacity: 100%;
     }
 }
+/* teste de transição */
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor--neon))
+    }
+    to {
+        filter: drop-shadow(0 0 20px var(--cor--neon))
+    }
+}
+
+.marioTransition{
+    --cor--neon: #dc2f02;
+    animation: neon 2s alternate infinite ease-in-out;
+}
+
+.luigiTransition{
+    --cor--neon: #081c15;
+    animation: neon 2s alternate infinite ease-in-out;
+}
+
 /* Media Queries */
 @media screen and (min-width: 768px){
     body{
