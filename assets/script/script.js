@@ -77,3 +77,13 @@ function switchJogador(){
     }
     return jogador
 }
+
+function desabilitarEvent () {
+    document.getElementsByClassName("main")[0].children[0].removeEventListener('click',colunaSelecionada)
+    document.getElementsByClassName("main")[0].children[1].removeEventListener('click',colunaSelecionada)
+    document.getElementsByClassName("main")[0].children[2].removeEventListener('click',colunaSelecionada)
+    document.getElementsByClassName("main")[0].children[3].removeEventListener('click',colunaSelecionada)
+    document.getElementsByClassName("main")[0].children[4].removeEventListener('click',colunaSelecionada)
+    document.getElementsByClassName("main")[0].children[5].removeEventListener('click',colunaSelecionada)
+    document.getElementsByClassName("main")[0].children[6].removeEventListener('click',colunaSelecionada)
+}
