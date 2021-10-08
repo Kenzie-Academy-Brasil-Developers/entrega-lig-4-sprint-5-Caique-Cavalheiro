@@ -215,12 +215,12 @@ section{
 
 .marioTransition{
     --cor--neon: #dc2f02;
-    animation: neon 2s alternate infinite ease-in-out;
+    animation: neon 0.5s alternate infinite ease-in-out;
 }
 
 .luigiTransition{
     --cor--neon: #081c15;
-    animation: neon 2s alternate infinite ease-in-out;
+    animation: neon 0.5s alternate infinite ease-in-out;
 }
 
 /* Media Queries */
