@@ -1,6 +1,5 @@
 //BOTÃO INICIAR O JOGO
 jogar.addEventListener('click', () => {
-    
     jogar.style.display = 'none'
     navbar.style.display = 'none'
     
